@@ -3,7 +3,7 @@
   <id>io.github.RobertBeckebans.RBDoom3BFG-GL</id>
   <launchable type="desktop-id">io.github.RobertBeckebans.RBDoom3BFG-GL.desktop</launchable>
   <name>RBDoom3BFG OpenGL</name>
-  <summary>RBDOOM-3-BFG is a modernization effort of DOOM-3-BFG</summary>
+  <summary>A modernization effort of DOOM-3-BFG</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
   <developer_name>RobertBeckebans</developer_name>
@@ -14,6 +14,8 @@
     <p>
       RBDOOM-3-BFG is based on DOOM-3-BFG and the goal of this port is to bring DOOM-3-BFG up to latest technology
       in 2023 making it closer to Doom 2016 while still remaining a DOOM 3 port regarding the gameplay.
+    </p>
+    <p>
       This version runs using X11 and OpenGL.
     </p>
   </description>
