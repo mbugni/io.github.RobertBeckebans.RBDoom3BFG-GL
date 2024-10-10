@@ -1,6 +1,6 @@
 app-id: io.github.RobertBeckebans.RBDoom3BFG-GL
 runtime: org.freedesktop.Platform
-runtime-version: '22.08'
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: rbdoom3bfg.sh
 finish-args:
@@ -13,11 +13,12 @@ cleanup:
   - /include
   - '*.a'
   - '*.la'
-  - /lib/pkgconfig
+  - /lib*/pkgconfig
+  - /lib*/debug
   - /share/man
   - /share/cmake
 modules:
-
+  - shared-modules/glew/glew.json
   - shared-modules/glu/glu-9.json
 
   # Build application from Git sources
@@ -31,6 +32,11 @@ modules:
       - -DSDL2=ON
       - -DFFMPEG=OFF
       - -DBINKDEC=ON
+      - -DUSE_SYSTEM_LIBGLEW=ON
+      - -DOpenGL_GL_PREFERENCE=GLVND
+    build-options:
+      env:  
+        CXXFLAGS: -Wno-error=nonnull
     sources:
       - type: git
         url: https://github.com/RobertBeckebans/RBDOOM-3-BFG
